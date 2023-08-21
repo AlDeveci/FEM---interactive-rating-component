@@ -1,0 +1,157 @@
+@font-face {
+    font-family: 'Overpass';
+    font-weight: 400;
+    font-display: swap;
+    src: url(fonts/Overpass-Regular.ttf) format(truetype);
+}
+
+@font-face {
+    font-family: 'Overpass';
+    font-weight: 700;
+    font-display: swap;
+    src: url(fonts/Overpass-Bold.ttf) format(truetype);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: hsl(216, 12%, 8%);
+    font-family: 'Overpass', sans-serif;
+    font-size: 15px;
+    color: hsl(217, 12%, 63%);
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+h1, h2 {
+    font-size: 1.7rem;
+    color: #fff;
+    margin-bottom: .5rem;
+}
+
+#wrapper {
+    max-width: 400px;
+    background: linear-gradient(hsl(213, 19%, 15%), hsl(213, 19%, 12%));
+    border-radius: 1.5rem;
+    margin: 1rem;
+}
+
+#first-card, #second-card {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#first-card {
+    padding: 1.5rem;
+}
+
+#first-card > div:first-child, #form-ratings label {
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: hsl(213, 19%, 18%);
+    width: 3rem;
+    height: 3rem;
+}
+
+#first-card img {
+    width: 17px;
+    height: 17px;
+}
+
+#first-card p {
+    line-height: 1.5rem;
+}
+
+#first-card input[type=radio] {
+    display: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#form-ratings {
+    display: flex;
+    justify-content: space-between;
+}
+
+#form-ratings label {
+    cursor: pointer;
+}
+
+#form-ratings label:hover {
+    color: #fff;
+    background-color: hsl(25, 97%, 53%);
+}
+
+#form-ratings label.checked {
+    color: #fff;
+    background-color: hsl(216, 12%, 54%);
+}
+
+form input[type=submit] {
+    font-family: 'Overpass', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 30px;
+    background: hsl(25, 97%, 53%);
+    width: 100%;
+    padding: .85rem;
+    letter-spacing: .1rem;
+    border: none;
+}
+
+form input[type=submit]:hover {
+    background: #fff;
+    color: hsl(25, 97%, 53%);
+}
+
+#second-card {
+    text-align: center;
+    padding: 2.35rem 2rem;
+}
+
+a:first-child {
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    border-radius: 50%;
+    background: hsl(213, 19%, 18%);
+    width: 3rem;
+    height: 3rem;
+}
+
+a:first-child:hover {
+    background: hsl(25, 97%, 53%);
+}
+
+a:first-child:hover svg {
+    fill: #fff;
+}
+
+a svg {
+    fill: hsl(25, 97%, 53%);
+    width: 17px;
+    height: 17px;
+}
+
+#notification {
+    color: hsl(25, 97%, 53%);
+    background: hsl(213, 19%, 18%);
+    width: fit-content;
+    margin: 0 auto;
+    border-radius: 20px;
+    padding: .5rem 1rem;
+}
